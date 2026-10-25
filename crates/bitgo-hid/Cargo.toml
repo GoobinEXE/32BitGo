@@ -1,0 +1,15 @@
+[package]
+name = "bitgo-hid"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+description = "Cross-platform USB/HID transport layer for 32BitGo"
+
+[dependencies]
+bitgo-core = { workspace = true }
+hidapi = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }

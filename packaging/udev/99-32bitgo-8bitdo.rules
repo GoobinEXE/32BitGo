@@ -1,0 +1,13 @@
+# 32BitGo — acesso HID em user-space para dispositivos 8BitDo (VID 0x2dc8).
+# Escopo ativo: Retro Mechanical Keyboard (PIDs a refinar após captura).
+#
+# Instalação:
+#   sudo cp 99-32bitgo-8bitdo.rules /etc/udev/rules.d/
+#   sudo udevadm control --reload-rules && sudo udevadm trigger
+
+# Acesso generico 8BitDo HID (plugdev + uaccess para systemd-logind)
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="2dc8", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+SUBSYSTEM=="usb", ATTRS{idVendor}=="2dc8", MODE="0660", GROUP="plugdev", TAG+="uaccess"
+
+# Retro Mechanical Keyboard — PIDs placeholder; atualizar apos inventario USB
+# SUBSYSTEM=="hidraw", ATTRS{idVendor}=="2dc8", ATTRS{idProduct}=="XXXX", MODE="0660", GROUP="plugdev", TAG+="uaccess"

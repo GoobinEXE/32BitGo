@@ -1,0 +1,15 @@
+[package]
+name = "bitgo-device-retro-keyboard"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+description = "8BitDo Retro Mechanical Keyboard device plugin (NES Edition first)"
+
+[dependencies]
+bitgo-core = { workspace = true }
+bitgo-hid = { workspace = true }
+serde = { workspace = true }
+thiserror = { workspace = true }

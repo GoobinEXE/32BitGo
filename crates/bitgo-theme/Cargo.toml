@@ -1,0 +1,13 @@
+[package]
+name = "bitgo-theme"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+description = "Dynamic theme engine and design tokens for 32BitGo (NES default)"
+
+[dependencies]
+bitgo-core = { workspace = true }
+serde = { workspace = true }

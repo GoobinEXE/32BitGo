@@ -1,0 +1,13 @@
+[package]
+name = "bitgo-ui"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+description = "Native Iced GUI for 32BitGo (Phase 2 stub)"
+
+[dependencies]
+bitgo-core = { workspace = true }
+bitgo-theme = { workspace = true }

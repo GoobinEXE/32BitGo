@@ -1,0 +1,36 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/bitgo-core",
+    "crates/bitgo-hid",
+    "crates/bitgo-device-retro-keyboard",
+    "crates/bitgo-theme",
+    "crates/bitgo-cli",
+    "crates/bitgo-ui",
+]
+default-members = ["crates/bitgo-cli"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/GoobinEXE/32BitGo"
+authors = ["32BitGo Contributors"]
+description = "Native, local-first alternative to 8BitDo Ultimate Software for Linux, Windows, and macOS"
+
+[workspace.dependencies]
+bitgo-core = { path = "crates/bitgo-core", version = "0.1.0" }
+bitgo-hid = { path = "crates/bitgo-hid", version = "0.1.0" }
+bitgo-device-retro-keyboard = { path = "crates/bitgo-device-retro-keyboard", version = "0.1.0" }
+bitgo-theme = { path = "crates/bitgo-theme", version = "0.1.0" }
+
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+hidapi = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+toml = "0.8"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
